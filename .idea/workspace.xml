@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1107d539-e94b-4989-b5de-d6924a9d358e" name="Default Changelist" comment="" />
+    <list default="true" id="1107d539-e94b-4989-b5de-d6924a9d358e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,6 +95,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="I:\javaxiangmu\答辩项目\youxi\.idea" />
+      </set>
+    </option>
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -107,6 +117,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1ZvizuoVOn3fxJdiE6aiyXQVLmI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="abbreviatePackageNames" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -119,6 +130,7 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575018269744" />
@@ -307,8 +319,16 @@
       <workItem from="1574919786611" duration="22627000" />
       <workItem from="1574950152480" duration="3962000" />
       <workItem from="1575002764882" duration="2829000" />
-      <workItem from="1585726242766" duration="88000" />
+      <workItem from="1585726242766" duration="334000" />
     </task>
+    <task id="LOCAL-00001" summary="首次上传">
+      <created>1585726564792</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585726564792</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -346,7 +366,26 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="首次上传" />
+    <option name="LAST_COMMIT_MESSAGE" value="首次上传" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="382" y="0" key="CommitChangelistDialog2" timestamp="1585726548725">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="382" y="0" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1585726548725" />
     <state x="296" y="206" key="FileChooserDialogImpl" timestamp="1585726381508">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
