@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh">
+<head>
+	<title>你看我有多好玩？</title>
+	<link href="youxi/zhuye/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="youxi/zhuye/js/jquery.min.js"></script>
+	<!-- Custom Theme files
+    theme-style-->
+	<link href="youxi/zhuye/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!--//theme-style-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Games Center Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!--fonts-->
+	<link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+	<!--fonts-->
+	<script src="http://www.jq22.com/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<style type="text/css">
+		.line{
+
+			position: absolute;
+
+			top: 300px; left: -80px;
+
+			z-index: 2;
+
+			height: 15px; width: 300px;
+
+			background: linear-gradient(#33ffff, #66cccc,#99cccc); opacity: 0.7 ; /* 标准的语法 */
+
+			/*动画效果*/
+
+			animation: myScan 3s infinite alternate;
+
+			-webkit-animation: myScan 3s infinite alternate;
+
+		}
+		@keyframes  myScan{
+
+			from { top:5px; }
+
+			to { top: 300px; }
+
+		}
+
+		-webkit-@keyframes  myScan{
+
+					from { top:5px; }
+
+					to { top: 600px; }
+
+				}
+		/*.box{background-image: url('image/bg2.jpg');width: 100%;height: 640px;background-size:100%, 100%;}*/
+		.video{width:250px;height:250px;margin:auto;background-image: url('image/faceBorder.png')}
+
+	</style>
+	<!--<script>
+	function face_login(){
+	context.drawImage(video, 0, 0, 200, 150);
+	jQuery.post('faceLogin', {           //指定发送图片到的servlet
+	snapData: canvas.toDataURL('image/jpg')
+	}).done(function(rs) {
+	//对结果集进行解析，判断是否存在人脸
+	console.log(JSON.stringify(rs));
+	if(rs.error_code == "222202"){
+	alert("没有人脸信息或人脸数量非1，请重新拍照！");
+	}else if(rs.error_code == "222207"){
+	alert("人脸库中没有您的注册信息，请先注册。");
+	}else if(rs.error_code == "223120"){
+	alert("请正确登录，不得伪造！");
+	}else if(rs.error_msg == "SUCCESS"){
+	alert("登录成功！");
+	// console.log(rs.result.user_list[0].user_info);
+	}
+	});
+	}
+	</script>-->
+</head>
+<body>
+<div th:insert="~{youxi/zhuye/top::topbar}"></div>
+<!--
+<div class="box">
+	<div class="right">
+-->
+		<div class="video" id="video" style="position:absolute;z-index:3;margin-left: 42%;margin-top: 130px;" hidden>
+
+			<!-- <div class="line"></div> -->
+
+			<video id="myVideo" src="" class="video" ></video>
+
+		</div>
+		<canvas id="myCanvas" width="600" height="400" hidden="hidden"></canvas>
+		<script>
+			var myVideo = document.getElementById('myVideo');
+			navigator.mediaDevices.getUserMedia({
+				video: true
+			}).then(function (mediaStream) {
+				myVideo.srcObject = mediaStream;
+				myVideo.onloadedmetadata = function () {
+					/* myVideo.controls = "controls"; 不显示控件*/
+					myVideo.play();
+				}
+			});
+
+
+
+
+			function f(){
+				$("#video").show();
+				setInterval("jiance()","1100");
+			}
+			function jiance(){
+				var canvas = document.getElementById('myCanvas').getContext('2d');
+				canvas.drawImage(myVideo, 0, 0);
+				// imgSrc  就是  base64 转义后的  数据
+				var imgSrc = document.getElementById("myCanvas").toDataURL(
+						"image/png").split("base64,")[1];
+				$.ajax({
+					type: "POST",
+					url:'loginServlet',
+					data:{
+						message:imgSrc
+					},
+					success:function(score){
+						console.log(score);
+						var scoreMatch = score.split(".")[0];
+						if(scoreMatch>80){
+							//window.location="/"
+							window.location="/xiazai"
+						}
+						else{
+
+							return;
+						}
+					}
+				})
+			}
+
+			 //每隔一秒执行一次函数截图
+
+
+			//将图片Base64 转成文件
+		</script>
+		<!-- <script type="text/javascript" color="120,148,255" opacity='0.8' zIndex="1" count="100" src="https://files.cnblogs.com/files/lfri/canvas-nest.js"></script> -->
+		<div id="iframe">
+		</div>
+	<!--</div>
+</div>-->
+<!--header-->
+<div class="single-inline">
+	<div class="blog-to" style="height: 430px">
+		<img class="img-responsive sin-on" th:src=${"youxi/zhuye/images/thumbs/"+session.game.gimg}/>
+		<div class="blog-top">
+			<div class="blog-left">
+				<b>[[${session.game.sj}]]</b>
+			</div>
+			<div class="top-blog" style="float: right;width: 500px;margin-right: 600px;margin-top: -300px;">
+				<a class="fast" th:href=${session.game.gshiwan} style="font-size: 30px">[[${session.game.gname}]] </a>
+				<p>Posted by <a href="single.html">Admin</a> in <a href="#">General</a> | <a href="single.html">10 Comments</a></p>
+				<p class="sed">[[${session.game.gdetail}]]</p>
+				<a th:href=${session.game.gshiwan} class="more">试玩游戏<span></span></a> <a href="/" class="more">返回</a>
+			</div>
+			<div class="clearfix" style="float:right;margin-right: 100px;margin-top: -300px;font-size: 25px;
+			font-family: 微软雅黑; height: 500px" >
+				<table class="sed" style="border: 1px black solid;height: 250px">
+
+					<tr>
+						<td>游戏大小：</td>
+						<td>30MB</td>
+						<td>&nbsp;   </td>
+						<td>运行系统：</td>
+						<td>Win</td>
+					</tr>
+
+					<tr>
+						<td>游戏类型：</td>
+						<td>益智</td>
+						<td>&nbsp;   </td>
+						<td>游戏厂商：</td>
+						<td>SNK</td>
+					</tr>
+
+					<tr>
+						<td>游戏价格：</td>
+						<td>￥[[${session.game.gprice}]]</td>
+						<td>&nbsp;   </td>
+						<td colspan="2" style="text-align: center">
+							<button style="height: 63px;background-color:#8FBF00; " class="more" onclick="f()">购买游戏</button>
+							</td>
+					</tr>
+					<tr></tr>
+
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<div th:insert="~{youxi/zhuye/foot::footbar}" ></div>
+</body>
+</html>

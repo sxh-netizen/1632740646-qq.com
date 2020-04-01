@@ -1,0 +1,115 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Games Center A Games Category Flat Bootstarp Resposive Website Template | Games :: w3layouts</title>
+<link href="youxi/zhuye/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="youxi/zhuye/js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="youxi/zhuye/css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Games Center Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--fonts-->
+<link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+<!--//fonts-->
+<script src="youxi/zhuye/js/modernizr.custom.js"></script>
+	<link rel="stylesheet" type="text/css" href="youxi/zhuye/css/component.css" />
+	<script type="application/json" src="js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(function () {
+			var gname = "";
+			$.ajax({
+				url:"/mohu",
+				type:"GET",
+				contentType:'application/json',
+				dataType:'json',
+				data:{gname},
+				success:function (result) {
+					if(null == result){
+						alert("卧槽");
+					}else {
+						$.each(result,function (index,result) {
+							var A = $("<a href='/selectById?gid="+result.gid+"' data-largesrc='youxi/zhuye/images/"+result.gimg+"' data-title='Subway Surfers' data-description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.'><img class='img-responsive' src='youxi/zhuye/images/thumbs/"+result.gimg+" ' alt='img01'/><font color='black'>"+result.gname+"</font></a>");
+							var Li = $("<li></li>").append(A);
+							$("#og-grid").append(Li);
+						});
+					}
+				}
+			});
+		});
+	</script>
+
+</head>
+<body> 
+<!--header-->
+<!--引入抽取的重复表头top-->
+<!--模板名：会使用thymeleaf的前后缀配置规则进行解析-->
+<div th:insert="~{youxi/zhuye/top::topbar}" ></div>
+
+<!--content-->
+	<div class="container">
+			<div class="games">
+				<h2> Games</h2>
+				<h4 align="center">
+					<input type="text" name="gname" id="ggg" />
+					<input type="button" value="搜索" id="btn"></h4>
+			<div class="wrap">	
+			<div class="main" id="dddd">
+				<ul id="og-grid" class="og-grid">
+
+					 <div class="clearfix"> </div>
+					</ul>
+				</div>
+			</div>
+		</div>
+<script src="youxi/zhuye/js/grid.js"></script>
+		<script>
+			$(function() {
+				Grid.init();
+			});
+		</script>
+	</div>
+	<!---->
+<!--引入抽取的重复元素底部foot-->
+<!--模板名：会使用thymeleaf的前后缀配置规则进行解析-->
+<div th:insert="~{youxi/zhuye/foot::footbar}" ></div>
+
+</body>
+<script>
+	$("#btn").click(function () {
+		$("#og-grid").empty();
+		window.close();
+
+			$.ajax({
+				url:"/mohu",
+				type:"GET",
+				contentType:'application/json',
+				dataType:'json',
+				data:{gname:$("#ggg").val()},
+				success:function (result) {
+					if(null == result){
+						alert("卧槽");
+					}else {
+						$.each(result,function (index,result) {
+							var A = $("<a href='/selectById?gid="+result.gid+"' data-largesrc='youxi/zhuye/images/"+result.gimg+"' data-title='Subway Surfers' data-description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.'><img class='img-responsive' src='youxi/zhuye/images/thumbs/"+result.gimg+" ' alt='img01'/><font color='black'>"+result.gname+"</font></a>");
+							var Li = $("<li></li>").append(A);
+							$("#og-grid").append(Li);
+						});
+					}
+				}
+			})
+	})
+</script>
+</html>

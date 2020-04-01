@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>樱花飘落动画</title>
+		<script type="text/javascript" src="./js/jquery.min.js"></script>
+		<script type="text/javascript" src="./js/snowfall.jquery.js"></script>
+		<style th:fragment="xuehuacss">
+			html,body{padding:0;margin:0;}
+			.darkBg{background:#3a3a3a;}
+			*{margin:0;padding:0;}
+			body{background-color:#FFF;}
+			.snowfall-flakes{animation:sakura 1s linear 0s infinite;}
+			@keyframes sakura{
+				0% {transform:rotate3d(0, 0, 0, 0deg);}
+				25%{transform:rotate3d(1, 1, 0, 60deg);}
+				50%{transform:rotate3d(1, 1, 0, 0deg);}
+				75%{transform:rotate3d(1, 0, 0, 60deg);}
+				100% {transform:rotate3d(1, 0, 0, 0deg);}
+			}
+		</style>
+	</head>
+	<body class="darkBg">
+		<script type='text/javascript' th:fragment="xuehuajs">
+		$(document).ready(function(){
+			$(document).snowfall({image:"./js/img/1.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"./js/img/1.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"./js/img/2.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"./js/img/4.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+		});
+		</script>
+	</body>
+</html>

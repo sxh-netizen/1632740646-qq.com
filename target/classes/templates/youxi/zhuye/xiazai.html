@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh">
+<head>
+	<title>你看我有多好玩？</title>
+	<link href="youxi/zhuye/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="youxi/zhuye/js/jquery.min.js"></script>
+	<!-- Custom Theme files
+    theme-style-->
+	<link href="youxi/zhuye/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!--//theme-style-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Games Center Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!--fonts-->
+	<link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+	<!--fonts-->
+
+	<!--<script>
+	function face_login(){
+	context.drawImage(video, 0, 0, 200, 150);
+	jQuery.post('faceLogin', {           //指定发送图片到的servlet
+	snapData: canvas.toDataURL('image/jpg')
+	}).done(function(rs) {
+	//对结果集进行解析，判断是否存在人脸
+	console.log(JSON.stringify(rs));
+	if(rs.error_code == "222202"){
+	alert("没有人脸信息或人脸数量非1，请重新拍照！");
+	}else if(rs.error_code == "222207"){
+	alert("人脸库中没有您的注册信息，请先注册。");
+	}else if(rs.error_code == "223120"){
+	alert("请正确登录，不得伪造！");
+	}else if(rs.error_msg == "SUCCESS"){
+	alert("登录成功！");
+	// console.log(rs.result.user_list[0].user_info);
+	}
+	});
+	}
+	</script>-->
+	<script>
+		$(function () {
+			alert("支付成功")
+		})
+	</script>
+
+</head>
+<body>
+<div th:insert="~{youxi/zhuye/top::topbar}"></div>
+
+<!--header-->
+<div class="single-inline">
+	<div class="blog-to" style="height: 430px">
+		<img class="img-responsive sin-on" th:src=${"youxi/zhuye/images/thumbs/"+session.game.gimg}/>
+		<div class="blog-top">
+			<div class="blog-left">
+				<b>[[${session.game.sj}]]</b>
+			</div>
+			<div class="top-blog" style="float: right;width: 500px;margin-right: 600px;margin-top: -300px;">
+				<a class="fast" th:href=${session.game.gshiwan} style="font-size: 30px">[[${session.game.gname}]] </a>
+				<p>Posted by <a href="single.html">Admin</a> in <a href="#">General</a> | <a href="single.html">10 Comments</a></p>
+				<p class="sed">[[${session.game.gdetail}]]</p>
+				<!--<a th:href=${session.game.gshiwan} class="more">你玩不玩<span></span></a> <a href="/" class="more">返回</a>-->
+			</div>
+			<div class="clearfix" style="float:right;margin-right: 100px;margin-top: -300px;font-size: 25px;
+			font-family: 微软雅黑; height: 500px" >
+				<table class="sed" style="border: 1px black solid;height: 250px">
+
+					<tr>
+						<td>游戏大小：</td>
+						<td>30MB</td>
+						<td>&nbsp;   </td>
+						<td>运行系统：</td>
+						<td>Win</td>
+					</tr>
+
+					<tr>
+						<td>游戏类型：</td>
+						<td>益智</td>
+						<td>&nbsp;   </td>
+						<td>游戏厂商：</td>
+						<td>SNK</td>
+					</tr>
+
+					<tr>
+						<td>游戏价格：</td>
+						<td>￥[[${session.game.gprice}]]</td>
+						<td>&nbsp;   </td>
+						<td colspan="2" style="text-align: center">
+							<a th:href="@{/download(gfile=${session.game.gfile})}" class="more" id="aa" hidden="hidden">下载游戏</a></td>
+					</tr>
+					<tr></tr>
+
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<div th:insert="~{youxi/zhuye/foot::footbar}" ></div>
+</body>
+</html>

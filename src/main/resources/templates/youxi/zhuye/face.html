@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh">
+<head>
+	<title>你看我有多好玩？</title>
+	<link href="youxi/zhuye/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="youxi/zhuye/js/jquery.min.js"></script>
+	<!-- Custom Theme files
+    theme-style-->
+	<link href="youxi/zhuye/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!--//theme-style-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Games Center Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!--fonts-->
+	<link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+	<!--fonts-->
+	<script src="http://www.jq22.com/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<style type="text/css">
+		.line{
+
+			position: absolute;
+
+			top: 300px; left: -80px;
+
+			z-index: 2;
+
+			height: 15px; width: 300px;
+
+			background: linear-gradient(#33ffff, #66cccc,#99cccc); opacity: 0.7 ; /* 标准的语法 */
+
+			/*动画效果*/
+
+			animation: myScan 3s infinite alternate;
+
+			-webkit-animation: myScan 3s infinite alternate;
+
+		}
+		@keyframes  myScan{
+
+			from { top:5px; }
+
+			to { top: 300px; }
+
+		}
+
+		-webkit-@keyframes  myScan{
+
+					from { top:5px; }
+
+					to { top: 600px; }
+
+				}
+		.box{background-image: url('image/bg2.jpg');width: 100%;height: 640px;background-size:100%, 100%;}
+		.video{width:250px;height:250px;margin:auto;background-image: url('image/faceBorder.png')}
+
+	</style>
+</head>
+<body>
+
+<!--header-->
+<div th:insert="~{youxi/zhuye/top::topbar}"></div>
+<div class="box">
+	<div class="right">
+		<div class="video">
+
+			<!-- <div class="line"></div> -->
+
+			<video id="myVideo" src="" class="video" ></video>
+
+		</div>
+		<canvas id="myCanvas" width="600" height="400" hidden="hidden"></canvas>
+		<script>
+			var myVideo = document.getElementById('myVideo');
+			navigator.mediaDevices.getUserMedia({
+				video: true
+			}).then(function (mediaStream) {
+				myVideo.srcObject = mediaStream;
+				myVideo.onloadedmetadata = function () {
+					/* myVideo.controls = "controls"; 不显示控件*/
+					myVideo.play();
+				}
+			});
+			function jiance(){
+				var canvas = document.getElementById('myCanvas').getContext('2d');
+				canvas.drawImage(myVideo, 0, 0);
+				// imgSrc  就是  base64 转义后的  数据
+				var imgSrc = document.getElementById("myCanvas").toDataURL(
+						"image/png").split("base64,")[1];
+				$.ajax({
+					type: "POST",
+					url:'loginServlet',
+					data:{
+						message:imgSrc
+					},
+					success:function(score){
+						console.log(score);
+						var scoreMatch = score.split(".")[0];
+						if(scoreMatch>80){
+							window.location="/"
+						}
+						else{
+
+							return;
+						}
+					}
+				})
+			}
+			setInterval("jiance()","1100");  //每隔一秒执行一次函数截图
+
+
+			//将图片Base64 转成文件
+		</script>
+		<!-- <script type="text/javascript" color="120,148,255" opacity='0.8' zIndex="1" count="100" src="https://files.cnblogs.com/files/lfri/canvas-nest.js"></script> -->
+		<div id="iframe">
+		</div>
+	</div>
+</div>
+<div th:insert="~{youxi/zhuye/foot::footbar}" ></div>
+</body>
+</html>

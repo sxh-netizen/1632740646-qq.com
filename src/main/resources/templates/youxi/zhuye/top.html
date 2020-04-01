@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Header</title>
+</head>
+<body>
+<!--此页面为公共的头元素-->
+<div class="header" th:fragment="topbar">
+    <div class="top-header" >
+        <div class="container">
+            <div class="top-head" >
+                <ul class="header-in">
+                    <li ><a href="youxi/zhuye/#" >帮助</a></li>
+                    <li><a href="youxi/zhuye/contact.html" th:href="@{/contact}">联系我们</a></li>
+                    <li ><a href="youxi/zhuye/#" >如何使用</a></li>
+                </ul>
+                <div class="search">
+                    <form>
+                        <input type="text" value="搜索信息" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '搜索信息';}" >
+                        <input type="submit" value="" >
+                    </form>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-top">
+        <div class="container">
+            <div class="head-top">
+                <div class="logo">
+                    <h1><a href="/"><span>G</span>ames<span>C</span>enter</a></h1>
+                </div>
+                <div class="top-nav">
+                    <span class="menu"><img src="youxi/zhuye/images/menu.png" alt=""> </span>
+                    <ul>
+                        <li class="active"><a class="color1" href="#"  th:href="@{/tologin}" th:if="${session.user == null}">用户登录</a></li>
+                        <li class="active"><a class="color1" href="#"  th:href="@{/tologin}" th:if="${session.user != null}">欢迎用户：<b th:text="${session.user.getUrealname()}"></b></a></li>
+                        <li><a class="color6" href="youxi/zhuye/contact.html" th:href="@{/exit}" th:if="${session.user != null}">退出</a></li>
+                        <li class="active"><a class="color1" href="/"  >主页</a></li>
+                        <li><a class="color2" href="/games"  >更多游戏</a></li>
+                        <li><a class="color3" href="/reviews"  >评论</a></li>
+                        <li><a class="color4" href="/" >新闻</a></li>
+                        <li><a class="color5" href="blog.html" th:href="@{/blog}"  >博客</a></li>
+                        <li><a class="color6" href="contact.html" th:href="@{/contact}" >联系</a></li>
+                        <div class="clearfix"> </div>
+                    </ul>
+                    <!--script-->
+                    <script>
+                        $("span.menu").click(function(){
+                            $(".top-nav ul").slideToggle(500, function(){
+                            });
+                        });
+                    </script>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

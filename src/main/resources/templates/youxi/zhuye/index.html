@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>快玩游戏首页</title>
+<link href="youxi/zhuye/css/bootstrap.css"  rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script  src="youxi/zhuye/js/jquery.min.js"></script>
+<!-- Custom Theme files
+theme-style-->
+<link href="youxi/zhuye/css/style.css"   rel="stylesheet" type="text/css" media="all" />
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Games Center Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--fonts-->
+<link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+<!--//fonts-->
+<script src="youxi/zhuye/js/modernizr.custom.js" ></script>
+	<link rel="stylesheet" type="text/css" href="youxi/zhuye/css/component.css" />
+	<script type="application/json" src="js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(function () {
+			$.ajax({
+				url:"/selectAll",
+				type:"GET",
+				contentType:'application/json',
+				dataType:'json',
+				data:{},
+				success:function (result) {
+					if(null == result){
+						alert("卧槽");
+					}else {
+						$.each(result,function (index,result) {
+							var A = $("<a href='/selectById?gid="+result.gid+"' data-largesrc='youxi/zhuye/images/"+result.gimg+"' data-title='Car Games' data-description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.'><img class='img-responsive' src='youxi/zhuye/images/thumbs/"+result.gimg+"'alt='img01'/><font color='black'>"+result.gname+"</font></a>");
+							var Li = $("<li></li>").append(A);
+							$("#og-grid").append().append(Li);
+							if("最新" == result.gtype){
+								var AA = $("<a href='/selectById?gid="+result.gid+"' class='fashion'><img class='img-responsive' src='youxi/zhuye/images/thumbs/"+result.gimg+"'> </a>");
+								var span = $("<span>"+result.gdate+"</span>");
+								var pa = $("<p><a href='/selectById?gid="+result.gid+"'>"+result.gname+"</a></p><a class='comment' href='single.html'><i> </i> 0 Comments</a>")
+								var div1 = $("<div class='grid-product'></div>").append(span).append(pa);
+								var div2 = $("<div class='clearfix'> </div>");
+								var diV = $("<div class='late'></div>").append(AA).append(div1).append(div2);
+								$("#latest").append(diV);
+							}
+							if("特色" == result.gtype){
+								var AA = $("<a href='/selectById?gid="+result.gid+"' class='fashion'><img class='img-responsive' src='youxi/zhuye/images/thumbs/"+result.gimg+"'> </a>");
+								var span = $("<span>"+result.gdate+"</span>");
+								var pa = $("<p><a href='/selectById?gid="+result.gid+"'>"+result.gname+"</a></p><a class='comment' href='single.html'><i> </i> 0 Comments</a>")
+								var div1 = $("<div class='grid-product'></div>").append(span).append(pa);
+								var div2 = $("<div class='clearfix'> </div>");
+								var diV = $("<div class='late'></div>").append(AA).append(div1).append(div2);
+								$("#featured").append(diV);
+							}
+							if("最受欢迎" == result.gtype){
+								var AA = $("<a href='/selectById?gid="+result.gid+"' class='fashion'><img class='img-responsive' src='youxi/zhuye/images/thumbs/"+result.gimg+"'> </a>");
+								var span = $("<span>"+result.gdate+"</span>");
+								var pa = $("<p><a href='/selectById?gid="+result.gid+"'>"+result.gname+"</a></p><a class='comment' href='single.html'><i> </i> 0 Comments</a>")
+								var div1 = $("<div class='grid-product'></div>").append(span).append(pa);
+								var div2 = $("<div class='clearfix'> </div>");
+								var diV = $("<div class='late'></div>").append(AA).append(div1).append(div2);
+								$("#popular").append(diV);
+							}
+						});
+					}
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+<!--header-->
+<!--引入抽取的重复表头top-->
+<!--模板名：会使用thymeleaf的前后缀配置规则进行解析-->
+<div th:insert="~{youxi/zhuye/top::topbar}" ></div>
+<!--banner-->
+	<div class="banner">
+<div class="container">
+		  <div class="wmuSlider example1">
+			   <div class="wmuSliderWrapper">
+			 <article style="position: absolute; width: 100%; opacity: 0;">
+				   	<div class="banner-wrap">
+						<div class="banner-top">
+							<img src="youxi/zhuye/images/12.jpg"  class="img-responsive" alt="">
+						</div>
+						  <div class="banner-top banner-bottom">
+							<img src="youxi/zhuye/images/11.jpg"  class="img-responsive" alt="">
+						</div>
+				   		 <div class="clearfix"> </div>
+				   	 </div>
+
+			</article>
+			 <article style="position: absolute; width: 100%; opacity: 0;">
+				   		<div class="banner-wrap">
+
+						<div class="banner-top">
+							<img src="youxi/zhuye/images/14.jpg" class="img-responsive" alt="">
+						</div>
+						  <div class="banner-top banner-bottom">
+							<img src="youxi/zhuye/images/13.jpg" class="img-responsive" alt="">
+						</div>
+				   		 <div class="clearfix"> </div>
+
+				   	 </div>
+			</article>
+			 <article style="position: absolute; width: 100%; opacity: 0;">
+				   		<div class="banner-wrap">
+							<div class="banner-top">
+							<img src="youxi/zhuye/images/16.jpg" class="img-responsive" alt="">
+						</div>
+						  <div class="banner-top banner-bottom">
+							<img src="youxi/zhuye/images/15.jpg" class="img-responsive" alt="">
+						</div>
+				   		 <div class="clearfix"> </div>
+				   	 </div>
+			</article>
+			</div>
+			 <ul class="wmuSliderPagination">
+                	<li><a href="youxi/zhuye/#" class="">0</a></li>
+                	<li><a href="youxi/zhuye/#" class="">1</a></li>
+                	<li><a href="youxi/zhuye/#" class="wmuActive">2</a></li>
+                </ul>
+		</div>
+		<!---->
+		  <script src="youxi/zhuye/js/jquery.wmuSlider.js"></script>
+			  <script>
+       			$('.example1').wmuSlider({
+					 pagination : true,
+					 nav : false,
+				});
+   		     </script>
+
+		</div>
+	</div>
+<!--content-->
+<div class="content">
+	<div class="container">
+			<div class="content-top">
+				<h2 class="new">NEW GAMES</h2>
+
+			<div class="wrap">
+			<div class="main">
+				<ul id="og-grid" class="og-grid">
+					<!--<li>
+						<a href="youxi/zhuye/#" data-largesrc="youxi/zhuye/images/1.jpg" data-title="Subway Surfers" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
+							<img class="img-responsive" src="youxi/zhuye/images/thumbs/1.jpg" alt="img01"/>
+						</a>
+					</li>-->
+
+					 <div class="clearfix"></div>
+					</ul>
+				</div>
+			</div>
+		</div>
+<script src="youxi/zhuye/js/grid.js"></script>
+		<script>
+			$(function() {
+				Grid.init();
+			});
+		</script>
+	</div>
+
+		<div class="col-mn">
+			<div class="container">
+					<div class="col-mn2">
+						<h3>The Best Features</h3>
+						<p>Contrary to popular belief
+							, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+						<a class=" more-in" href="youxi/zhuye/single.html" th:href="@{single}">Read More</a>
+				</div>
+			</div>
+		</div>
+		<!---->
+	<div class="featured">
+		<div class="container">
+			<div class="col-md-4 latest" id="latest">
+				<h4>最新</h4>
+
+			</div>
+			<div class="col-md-4 latest" id="featured">
+				<h4>特色</h4>
+
+			</div>
+			<div class="col-md-4 latest" id="popular">
+				<h4>热门</h4>
+			</div>
+		</div>
+	</div>
+	</div>
+	<!---->
+<!--引入抽取的重复元素底部foot-->
+<!--模板名：会使用thymeleaf的前后缀配置规则进行解析-->
+<div th:insert="~{youxi/zhuye/foot::footbar}" ></div>
+</body>
+</html>

@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1107d539-e94b-4989-b5de-d6924a9d358e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="hideWarnings" value="true" />
+    <option name="HIDE_WARNINGS" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="spring-beans.schema" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>src=&quot;youxi/</find>
+      <find>href=&quot;zhuye/youxi/</find>
+      <find>Image(&quot;</find>
+      <find>url('</find>
+      <find>b</find>
+      <find>hr=&quot;</find>
+      <find>body</find>
+      <find>doDis</find>
+      <find>Latest</find>
+      <find>span</find>
+      <find>menu</find>
+      <find>404</find>
+      <find>input</find>
+      <find>src=&quot;images</find>
+      <find>href=&quot;css</find>
+      <find>../../../static/</find>
+      <find>href=&quot;</find>
+      <find>src</find>
+      <find>href</find>
+      <find>src=&quot;</find>
+      <find>images</find>
+      <find>clear</find>
+      <find>clo</find>
+      <find>url</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>src=&quot;youxi/</replace>
+      <replace>href=&quot;youxi/</replace>
+      <replace>src=&quot;zhuye/youxi/</replace>
+      <replace>href=&quot;youxi/gongfuji/</replace>
+      <replace>Image(&quot;youxi/gongfuji/</replace>
+      <replace>url('youxi/gongfuji/</replace>
+      <replace>src=&quot;youxi/gongfuji/</replace>
+      <replace>src=&quot;youxi/zhuye/</replace>
+      <replace>src=&quot;youxi/user/</replace>
+      <replace>href=&quot;youxi/user/</replace>
+      <replace>th:href=&quot;@{</replace>
+      <replace>src=&quot;youxi/superuser/</replace>
+      <replace>href=&quot;youxi/zhuye/</replace>
+      <replace>src=&quot;zwdzjs/images</replace>
+      <replace>../</replace>
+      <replace>src=&quot;tkdz/</replace>
+      <replace>href=&quot;csstk</replace>
+      <replace>src=&quot;jstk</replace>
+      <replace>imagestk</replace>
+      <replace>zwdzjs/images</replace>
+      <replace>src=&quot;cdr/</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="F:\Mavenchuangku\m2\.m2\repository" />
+        <option name="mavenHome" value="F:/maven352" />
+        <option name="userSettingsFile" value="F:\Mavenchuangku\m2\.m2\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZvizuoVOn3fxJdiE6aiyXQVLmI" />
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575018269744" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Documents\Tencent Files\2934391688\FileRecv\youxi\src\main\resources\templates\youxi\jsgame" />
+      <recent name="D:\Documents\Tencent Files\2934391688\FileRecv\youxi\src\main\resources\static\tkdz" />
+      <recent name="C:\xuexi\xuexiziliao\shixun\youxi\src\main\resources\config" />
+      <recent name="C:\xuexi\xuexiziliao\shixun\youxi\src\main\resources" />
+      <recent name="C:\xuexi\xuexiziliao\shixun\youxi\src\main\resources\templates\youxi\zhuye" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\youxi\src\main\resources\static\youxi\zhuye\images\thumbs" />
+      <recent name="C:\2019实训基地\11月\11.02\youxi\src\main\java\com\er\controller" />
+      <recent name="C:\2019实训基地\11月\11.02\youxi\src\main\resources\templates\youxi\superuser" />
+      <recent name="C:\2019实训基地\11月\11.02\youxi\src\main\resources\static\youxi\zhuye\images" />
+      <recent name="C:\2019实训基地\11月\11.02\youxi\src\main\resources\templates\youxi\zhuye" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ZhuchengxuApplication">
+    <configuration name="ZhuchengxuApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="youxi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.er.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.er" />
+      <option name="MAIN_CLASS_NAME" value="com.er.ZhuchengxuApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZhuchengxuApplicationTests.contextLoads3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="youxi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.er.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.er" />
+      <option name="MAIN_CLASS_NAME" value="com.er.ZhuchengxuApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZhuchengxuApplicationTests.contextLoads4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="youxi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.er.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.er" />
+      <option name="MAIN_CLASS_NAME" value="com.er.ZhuchengxuApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads4" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZhuchengxuApplicationTests.contextLoads5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="youxi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.er.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.er" />
+      <option name="MAIN_CLASS_NAME" value="com.er.ZhuchengxuApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads5" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZhuchengxuApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="youxi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.er.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.er.ZhuchengxuApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.ZhuchengxuApplication" />
+        <item itemvalue="JUnit.ZhuchengxuApplicationTests.contextLoads" />
+        <item itemvalue="JUnit.ZhuchengxuApplicationTests.contextLoads3" />
+        <item itemvalue="JUnit.ZhuchengxuApplicationTests.contextLoads5" />
+        <item itemvalue="JUnit.ZhuchengxuApplicationTests.contextLoads4" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1107d539-e94b-4989-b5de-d6924a9d358e" name="Default Changelist" comment="" />
+      <created>1573475072880</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573475072880</updated>
+      <workItem from="1573475076064" duration="4795000" />
+      <workItem from="1573482115864" duration="363000" />
+      <workItem from="1573537784319" duration="1019000" />
+      <workItem from="1573556434126" duration="4424000" />
+      <workItem from="1573563150575" duration="2224000" />
+      <workItem from="1573624971270" duration="1234000" />
+      <workItem from="1573632233962" duration="5608000" />
+      <workItem from="1573646397603" duration="788000" />
+      <workItem from="1573649918110" duration="331000" />
+      <workItem from="1573710481844" duration="18800000" />
+      <workItem from="1573733947000" duration="4051000" />
+      <workItem from="1573744810073" duration="128000" />
+      <workItem from="1573796943597" duration="970000" />
+      <workItem from="1573798926200" duration="422000" />
+      <workItem from="1573801846826" duration="18868000" />
+      <workItem from="1573824183179" duration="2369000" />
+      <workItem from="1573980783254" duration="4217000" />
+      <workItem from="1574000339268" duration="56000" />
+      <workItem from="1574069558980" duration="10417000" />
+      <workItem from="1574081959517" duration="192000" />
+      <workItem from="1574128359460" duration="4005000" />
+      <workItem from="1574216975965" duration="27351000" />
+      <workItem from="1574295627527" duration="1445000" />
+      <workItem from="1574300754203" duration="8689000" />
+      <workItem from="1574316344793" duration="9034000" />
+      <workItem from="1574327329982" duration="4273000" />
+      <workItem from="1574340481279" duration="50000" />
+      <workItem from="1574517308616" duration="2343000" />
+      <workItem from="1574574721761" duration="5968000" />
+      <workItem from="1574580842975" duration="17856000" />
+      <workItem from="1574677632214" duration="8385000" />
+      <workItem from="1574754398946" duration="11603000" />
+      <workItem from="1574835731268" duration="15916000" />
+      <workItem from="1574854819591" duration="11303000" />
+      <workItem from="1574919786611" duration="22627000" />
+      <workItem from="1574950152480" duration="3962000" />
+      <workItem from="1575002764882" duration="2829000" />
+      <workItem from="1585726242766" duration="88000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="ZhuchengxuApplicationTests_contextLoads3 - 2019.11.20 at 16h 38m 07s.xml">
+      <configuration name="ZhuchengxuApplicationTests.contextLoads3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ZhuchengxuApplicationTests_contextLoads3 - 2019.11.20 at 16h 39m 30s.xml">
+      <configuration name="ZhuchengxuApplicationTests.contextLoads3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ZhuchengxuApplicationTests_contextLoads4 - 2019.11.20 at 16h 56m 14s.xml">
+      <configuration name="ZhuchengxuApplicationTests.contextLoads4" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ZhuchengxuApplicationTests_contextLoads5 - 2019.11.20 at 17h 02m 37s.xml">
+      <configuration name="ZhuchengxuApplicationTests.contextLoads5" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ZhuchengxuApplicationTests_contextLoads5 - 2019.11.20 at 17h 04m 14s.xml">
+      <configuration name="ZhuchengxuApplicationTests.contextLoads5" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ZhuchengxuApplicationTests_contextLoads3 - 2019.11.20 at 17h 04m 31s.xml">
+      <configuration name="ZhuchengxuApplicationTests.contextLoads3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ZhuchengxuApplicationTests_contextLoads3 - 2019.11.20 at 17h 10m 10s.xml">
+      <configuration name="ZhuchengxuApplicationTests.contextLoads3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ZhuchengxuApplicationTests_contextLoads - 2019.11.23 at 21h 58m 13s.xml">
+      <configuration name="ZhuchengxuApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ZhuchengxuApplicationTests_contextLoads - 2019.11.23 at 22h 00m 39s.xml">
+      <configuration name="ZhuchengxuApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ZhuchengxuApplicationTests_contextLoads - 2019.11.23 at 22h 02m 19s.xml">
+      <configuration name="ZhuchengxuApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="296" y="206" key="FileChooserDialogImpl" timestamp="1585726381508">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="296" y="206" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1585726381508" />
+    <state x="364" y="100" key="SettingsEditor" timestamp="1585726333190">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="364" y="100" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1585726333190" />
+    <state x="524" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1585726243095">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="524" y="282" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1585726243095" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="isLogin" />
+        <watch expression="isLogin" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>youxi</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8.0_221</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>json-20160810</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

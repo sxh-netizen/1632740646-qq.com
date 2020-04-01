@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Games Center A Games Category Flat Bootstarp Resposive Website Template | Single :: w3layouts</title>
+<link href="youxi/zhuye/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="youxi/zhuye/js/jquery.min.js"></script>
+<!-- Custom Theme files
+theme-style-->
+<link href="youxi/zhuye/css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Games Center Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--fonts-->
+<link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+<!--//fonts-->
+	<script src="youxi/zhuye/js/modernizr.custom.js"></script>
+	<link rel="stylesheet" type="text/css" href="youxi/zhuye/css/component.css" />
+	<script type="application/json" src="js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(function () {
+			$.ajax({
+				url:"/selectEval",
+				type:"GET",
+				contentType:'application/json',
+				dataType:'json',
+				data:{},
+				success:function (result) {
+					if(null == result){
+						alert("失败了");
+					}else {
+						$.each(result,function (index,result) {
+							var a = $("<div class='media'><div class='media-left'><a href='youxi/zhuye/#'><img class='media-object' src='youxi/zhuye/images/co.png' alt=''></a></div><div class='media-body'><h4 class='media-heading'><a href='youxi/zhuye/#'>"+result.econtent+"</a></h4><p>"+result.time+"</p></div></div>");
+							$("#single-middle").append(a);
+						});
+					}
+				}
+			});
+		});
+	</script>
+</head>
+<body> 
+<!--header-->
+<!--引入抽取的重复表头top-->
+<!--模板名：会使用thymeleaf的前后缀配置规则进行解析-->
+<div th:insert="~{youxi/zhuye/top::topbar}" ></div>
+<!--content-->
+			<div class="container">
+				<div class="single">
+					<div class="blog-to">
+
+						<img class="img-responsive sin-on" th:src=${"youxi/zhuye/images/"+gameSingle.gsingleimg} alt="" />
+							<div class="blog-top">
+							<div class="blog-left">
+								<b>[[${gameSingle.sj}]]</b>
+								<span></span>
+							</div>
+							<div class="top-blog">
+								<a class="fast" href="youxi/zhuye/#">[[${gameSingle.gname}]] </a>
+								<p>Posted by <a href="youxi/zhuye/#">Admin</a> in <a href="youxi/zhuye/#">General</a> | <a href="youxi/zhuye/#">10 Comments</a></p>
+								<p class="sed">[[${gameSingle.gdetail}]]</p>
+								<!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis. Donec et purus nec leo interdum sodales nec sit amet magna.</p>
+                   <div class="col-md-6 md-in">
+                   <ul class="grid-part">
+                       <li><a href="youxi/zhuye/#"><i class="sign"> </i>Sed ut perspiciatis unde omnis</a></li>
+                       <li><a href="youxi/zhuye/#"><i class="sign"> </i>Lorem ipsum dolor sit amet,  </a></li>
+                       <li><a href="youxi/zhuye/#"><i class="sign"> </i>Sed ut perspiciatis unde omnis</a></li>
+                       <li><a href="youxi/zhuye/#"><i class="sign"> </i>Lorem ipsum dolor sit amet,  </a></li>
+                       <li><a href="youxi/zhuye/#"><i class="sign"> </i>Sed ut perspiciatis unde omnis</a></li>
+                   </ul>
+                   </div>
+                   <div class="col-md-6 md-in">
+                   <ul class="grid-part">
+                       <li><a href="youxi/zhuye/#"><i class="sign"> </i>Sed ut perspiciatis unde omnis</a></li>
+                       <li><a href="youxi/zhuye/#"><i class="sign"> </i>Lorem ipsum dolor sit amet,  </a></li>
+                       <li><a href="youxi/zhuye/#"><i class="sign"> </i>Sed ut perspiciatis unde omnis</a></li>
+                       <li><a href="youxi/zhuye/#"><i class="sign"> </i>Lorem ipsum dolor sit amet,  </a></li>
+                       <li><a href="youxi/zhuye/#"><i class="sign"> </i>Sed ut perspiciatis unde omnis</a></li>
+                   </ul>
+                   </div>-->
+						<div class="clearfix"> </div>
+							</div>
+							<div class="clearfix"> </div>
+					</div>
+					</div>
+		<div class="single-middle" id="single-middle">
+			<h3>[[${count}]]&nbsp;&nbsp;&nbsp;Comments</h3>
+				<!--<div class="media" id="media">
+				  <div class="media-left">
+					<a href="youxi/zhuye/#">
+					  <img class="media-object" src="youxi/zhuye/images/co.png" alt="">
+					</a>
+				  </div>
+				  <div class="media-body" id="media-body">
+					<h4 class="media-heading"><a href="youxi/zhuye/#"></a></h4>
+						<p></p>
+				  </div>
+				</div>-->
+				<!--<div class="media in-media">
+				  <div class="media-left">
+					<a href="youxi/zhuye/#">
+					  <img class="media-object" src="youxi/zhuye/images/co.png" alt="">
+					</a>
+				  </div>
+				   <div class="media-body">
+					<h4 class="media-heading"><a href="youxi/zhuye/#">Joseph Goh</a></h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					Duis aute irure dolor in reprehenderit .</p>
+				  </div>
+				</div>
+				<div class="media">
+				  <div class="media-left">
+					<a href="youxi/zhuye/#">
+					  <img class="media-object" src="youxi/zhuye/images/co.png" alt="">
+					</a>
+				  </div>
+				  <div class="media-body">
+					<h4 class="media-heading"><a href="youxi/zhuye/#">Melinda Dee</a></h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					Duis aute irure dolor in reprehenderit .</p>
+				  </div>
+				</div>-->
+		</div>
+		<!---->
+		<div class="single-bottom">
+			<h3>Leave A Comment</h3>
+				<form action="evaladd" method="post">
+
+						<div class="clearfix"> </div>
+					<input type="hidden" name="uid" th:value="${session.user.uid}">
+					<input type="hidden" name="gid" th:value=${gameSingle.gid}>
+						<textarea cols="77" rows="6" name="econtent" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+						
+							<input type="submit" value="Send" >
+				</form>
+			</div>
+		</div>
+</div>
+	<!---->
+<!--引入抽取的重复元素底部foot-->
+<!--模板名：会使用thymeleaf的前后缀配置规则进行解析-->
+<div th:insert="~{youxi/zhuye/foot::footbar}" ></div>
+</body>
+</html>

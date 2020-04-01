@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>头部</title>
+</head>
+<body>
+<div class="container" th:fragment="usertop">
+    <div class="logo"><a href="index.html">超级管理员页面</a></div>
+    <div class="open-nav"><i class="iconfont">&#xe699;</i></div>
+    <ul class="layui-nav right" lay-filter="">
+        <li class="layui-nav-item">
+            <a href="javascript:;" >[[${session.user.urealname}]]</a>
+            <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                <!--<dd><a href="" th:href="@{}">个人信息</a></dd>-->
+                <dd><a href="" th:href="@{/exit}">切换帐号</a></dd>
+                <dd><a href="login.html" th:href="@{/exit}">退出</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item"><a href="/" th:href="@{/}">前台首页</a></li>
+    </ul>
+</div>
+</body>
+</html>

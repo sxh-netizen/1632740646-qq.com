@@ -1,0 +1,85 @@
+﻿<!doctype html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>超级管理员降临</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/xadmin.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css">
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+    <script src="lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/xadmin.js"></script>
+    <!-- 雪花飘落的js和css-->
+    <script type="text/javascript" src="./js/snowfall.jquery.js"></script>
+    <script src="/js/jquery.cookie.js"></script>
+    <script src="/js/jquery.base64.min.js"></script>
+    <style>
+        html,body{padding:0;margin:0;}
+        .darkBg{background:#3a3a3a;}
+        *{margin:0;padding:0;}
+        body{background-image: url("image/bg.jpg")}
+        .snowfall-flakes{animation:sakura 1s linear 0s infinite;}
+        @keyframes sakura{
+            0% {transform:rotate3d(0, 0, 0, 0deg);}
+            25%{transform:rotate3d(1, 1, 0, 60deg);}
+            50%{transform:rotate3d(1, 1, 0, 0deg);}
+            75%{transform:rotate3d(1, 0, 0, 60deg);}
+            100% {transform:rotate3d(1, 0, 0, 0deg);}
+        }
+    </style>
+    <!--js雪花的特效-->
+    <script type='text/javascript'>
+        /* $(document).ready(function(){
+            $(document).snowfall({image:"./js/img/1.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"./js/img/1.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"./js/img/2.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"./js/img/4.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+          });*/
+    </script>
+</head>
+<body>
+<!-- 顶部开始 -->
+<div th:insert="~{youxi/superuser/top::usertop}"></div>
+    <!-- 中部开始 -->
+    <div class="wrapper">
+        <!-- 左侧菜单开始 -->
+        <div class="left-nav" th:insert="~{youxi/superuser/concent-left.html::userleft}">
+        </div>
+        <!-- 右侧主体开始 -->
+        <div class="page-content">
+          <div class="content">
+            <!-- 右侧内容框架，更改从这里开始 -->
+            <form action="/fileUpload" method="post" enctype="multipart/form-data">
+                <input type="file" name="filename" placeholder="请选择文件"/>
+                <input type="submit" th:placeholder="上传" value="上传" style="color: black"/>
+            </form>
+            <!-- 右侧内容框架，更改从这里结束 -->
+          </div>
+        </div>
+        <!-- 右侧主体结束 -->
+    </div>
+    <!-- 中部结束 -->
+     
+</body>
+
+<script>
+
+    function edit() {
+        let gameinfo = $("#editform").serializeArray();
+        $.ajax({
+            type:'POST',
+            url:'/toupdate',
+            data:gameinfo,
+            success:function (result) {
+               window.location.href="/toyouxi";
+            }
+        })
+
+    }
+</script>
+
+
+</html>

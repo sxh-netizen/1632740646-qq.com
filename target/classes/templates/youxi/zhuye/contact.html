@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Games Center A Games Category Flat Bootstarp Resposive Website Template | Contact :: w3layouts</title>
+    <link href="youxi/zhuye/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="youxi/zhuye/js/jquery.min.js"></script>
+    <!-- Custom Theme files -->
+    <!--theme-style-->
+    <link href="youxi/zhuye/css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <!--//theme-style-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="Games Center Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <!--fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    <!--//fonts-->
+
+</head>
+<body>
+<!--header-->
+<!--引入抽取的重复表头top-->
+<!--模板名：会使用thymeleaf的前后缀配置规则进行解析-->
+<div th:insert="~{youxi/zhuye/top::topbar}"></div>
+<!--banner-->
+<!--content-->
+<div class="single-bottom">
+    <h3>Leave A Comment</h3>
+    <form th:action="@{/send}" th:method="post">
+        <div class="col-md-4 comment">
+            <input type="text" th:name="title" value="Name" onfocus="this.value='';"
+                   onblur="if (this.value == '') {this.value ='Name';}">
+        </div>
+        <div class="col-md-4 comment">
+            我们的邮箱：
+            <input type="email" th:name="email" value="374760798@qq.com" onfocus="this.value='374760798@qq.com';"
+                   onblur="if (this.value == '374760798@qq.com') {this.value ='374760798@qq.com';}" readonly="readonly">
+        </div>
+        <div class="clearfix"></div>
+        <textarea cols="77" rows="6" value=" " th:name="context" onfocus="this.value='';"
+                  onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+
+        <input type="submit" value="Send">
+    </form>
+</div>
+</div>
+<!---->
+<!--引入抽取的重复元素底部foot-->
+<!--模板名：会使用thymeleaf的前后缀配置规则进行解析-->
+<div th:insert="~{youxi/zhuye/foot::footbar}"></div>
+</body>
+</html>

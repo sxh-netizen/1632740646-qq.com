@@ -1,0 +1,211 @@
+﻿<!doctype html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>超级管理降临</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/xadmin.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+    <script src="lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/xadmin.js"></script>
+    <!-- 雪花飘落的js和css-->
+    <script type="text/javascript" src="./js/snowfall.jquery.js"></script>
+    <script src="/js/jquery.cookie.js"></script>
+    <script src="/js/jquery.base64.min.js"></script>
+    <style>
+        html,body{padding:0;margin:0;}
+        .darkBg{background:#3a3a3a;}
+        *{margin:0;padding:0;}
+        body{background-image: url("image/bg.jpg")}
+        .snowfall-flakes{animation:sakura 1s linear 0s infinite;}
+        @keyframes sakura{
+            0% {transform:rotate3d(0, 0, 0, 0deg);}
+            25%{transform:rotate3d(1, 1, 0, 60deg);}
+            50%{transform:rotate3d(1, 1, 0, 0deg);}
+            75%{transform:rotate3d(1, 0, 0, 60deg);}
+            100% {transform:rotate3d(1, 0, 0, 0deg);}
+        }
+    </style>
+    <!--js雪花的特效-->
+    <script type='text/javascript'>
+        $(document).ready(function(){
+            $(document).snowfall({image:"./js/img/1.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"./js/img/1.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"./js/img/2.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"./js/img/4.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+        });
+    </script>
+    <!--ajax提交表单-->
+    <script>
+       /* function add() {
+            let  userinfo =$("#addform").serializeArray();
+            $.ajax({
+                type:"POST",
+                url:"/save",
+                data:userinfo,
+                success:function (e) {
+                    alert("添加成功");
+                location.href="/member-list";
+                },
+                error:function (e) {
+                    alert("添加失败")
+                }
+
+            })
+
+
+        }*/
+    </script>
+
+
+
+
+</head>
+<body>
+<!-- 顶部开始 -->
+<div th:insert="~{youxi/superuser/top::usertop}"></div>
+<!-- 顶部结束 -->
+<!-- 中部开始 -->
+<div class="wrapper">
+    <!-- 左侧菜单开始 -->
+    <div class="left-nav" th:insert="~{youxi/superuser/concent-left.html::userleft}">
+    </div>
+    <!-- 右侧主体开始 -->
+    <div class="page-content">
+        <div class="content">
+            <!-- 右侧内容框架，更改从这里开始 -->
+            <form class="layui-form" id="addform" th:action="@{/save}" method="post">
+                <div class="layui-form-item">
+                    <label for="L_email" class="layui-form-label">
+                        <span class="x-red">*</span>邮箱
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="email" id="L_email" name="uemail" required="" lay-verify="email"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">
+                        <span class="x-red">*</span>将会成为您唯一的登入名
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="L_username" class="layui-form-label">
+                        <span class="x-red">*</span>昵称
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="L_username" name="urealname" required="" lay-verify="nikename"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="L_username" class="layui-form-label">
+                        <span class="x-red">*</span>账号
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="uname" name="uname" required="" lay-verify="nikename"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="L_pass" class="layui-form-label">
+                        <span class="x-red">*</span>密码
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="password" id="L_pass" name="upwd" required="" lay-verify="pass"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">
+                        6到16个字符
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="L_pass" class="layui-form-label">
+                        <span class="x-red">*</span>手机号
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="uphone" name="uphone" required="" lay-verify="pass"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">
+                        11个字符
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="L_pass" class="layui-form-label">
+                        <span class="x-red">*</span>地址
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="uaddress" name="uaddress" required="" lay-verify="pass"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">
+                        现居住的地区
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label for="L_pass" class="layui-form-label">
+                        <span class="x-red">*</span>用户类型
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="radio" name="ustyle" value="用户"  title="用户" class="layui-input">
+                        <input type="radio" name="ustyle" value="超级管理员"  title="管理员" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="L_pass" class="layui-form-label">
+                        <span class="x-red">*</span>性别
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="radio" name="usex" value="1"  title="男" class="layui-input"><!--required="男"-->
+                        <input type="radio" name="usex" value="2"  title="女" class="layui-input">
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">
+                        人的种族
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label for="L_pass" class="layui-form-label">
+                        <span class="x-red">*</span>是否被启用
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="radio" name="ustate" value="已启用" required="是" title="是" class="layui-input"><!--lay-verify="pass"
+                        autocomplete="off"-->
+                        <input type="radio" name="ustate" value="未启用" required="否" title="否" class="layui-input"><!--lay-verify="pass"
+                        autocomplete="off"-->
+
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">
+                        决定用户是否能登录
+                    </div>
+                </div>
+                <!-- <div class="layui-form-item">
+                     <label for="L_repass" class="layui-form-label">
+                         <span class="x-red">*</span>确认密码
+                     </label>
+                     <div class="layui-input-inline">
+                         <input type="password" id="L_repass"  name="upwd" required="" lay-verify="repass"
+                         autocomplete="off" class="layui-input">
+                     </div>
+                 </div>-->
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><!--for="L_repass"-->
+                    </label>
+                    <button th:onclick="add()" class="layui-btn" lay-filter="add" lay-submit="">
+                        增加
+                    </button>
+                </div>
+            </form>
+            <!-- 右侧内容框架，更改从这里结束 -->
+        </div>
+    </div>
+    <!-- 右侧主体结束 -->
+</div>
+<!-- 中部结束 -->
+
+</body>
+</html>

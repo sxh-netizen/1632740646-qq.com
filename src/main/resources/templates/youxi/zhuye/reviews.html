@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Games Center A Games Category Flat Bootstarp Resposive Website Template | Reviews :: w3layouts</title>
+<link href="youxi/zhuye/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="youxi/zhuye/js/jquery.min.js"></script>
+<!-- Custom Theme files
+theme-style-->
+<link href="youxi/zhuye/css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Games Center Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--fonts-->
+<link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+<!--//fonts-->
+	<script src="youxi/zhuye/js/modernizr.custom.js"></script>
+	<link rel="stylesheet" type="text/css" href="youxi/zhuye/css/component.css" />
+	<script type="application/json" src="js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(function () {
+			$.ajax({
+				url:"/selectAll",
+				type:"GET",
+				contentType:'application/json',
+				dataType:'json',
+				data:{},
+				success:function (result) {
+					if(null == result){
+						alert("卧槽");
+					}else {
+						$.each(result,function (index,result) {
+								var a = $("<div class='col-md-4 sed-md' style='margin-top: 20px;'>" +
+										"<div class=' col-1'><a href='/selectSingle?gid="+result.gid+"'><img class='img-responsive' src='youxi/zhuye/images/thumbs/"+result.gimg+"' alt=''></a><h4><a href='/selectSingle?gid="+result.gid+"'>"+result.gname+"</a></h4><p>"+result.gjianjie+"</p></div> " +
+										"</div>");
+								$("#diva").append(a)
+						});
+					}
+				}
+			});
+		});
+	</script>
+
+</head>
+<body> 
+<!--header-->
+<!--引入抽取的重复表头top-->
+<!--模板名：会使用thymeleaf的前后缀配置规则进行解析-->
+<div th:insert="~{youxi/zhuye/top::topbar}" ></div>
+<!--content-->
+	<div class="review">
+		<div class="container">
+			<h2 >Reviews</h2>
+         <div class="review-md1" id="diva">
+             <!--<div class="col-md-4 sed-md" >
+                  <div class=" col-1" id="diva">-->
+                     <!--<a href="/single"><img class="img-responsive" src="youxi/zhuye/images/re.jpg" alt=""></a>
+                     <h4><a href="/single">Sed ut perspiciatis unde omnis</a></h4>
+                    <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>-->
+                 <!--</div>
+             </div>-->
+                <!--<div class="col-md-4 sed-md">
+                    <div class=" col-1">
+                       <a href="youxi/zhuye/single.html"><img class="img-responsive" src="youxi/zhuye/images/re1.jpg" alt=""></a>
+                       <h4><a href="youxi/zhuye/single.html">Sed ut perspiciatis unde omnis</a></h4>
+                      <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>
+                   </div>
+               </div>
+                <div class="col-md-4 sed-md">
+                    <div class=" col-1">
+                       <a href="youxi/zhuye/single.html"><img class="img-responsive" src="youxi/zhuye/images/re2.jpg" alt=""></a>
+                       <h4><a href="youxi/zhuye/single.html">Sed ut perspiciatis unde omnis</a></h4>
+                      <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>
+                   </div>
+               </div>-->
+               <!--<div class="clearfix"> </div>-->
+             </div>
+            <!--<div class="review-md1">&ndash;&gt;
+             <div class="col-md-4 sed-md">
+                  <div class=" col-1">
+                     <a href="youxi/zhuye/single.html"><img class="img-responsive" src="youxi/zhuye/images/re3.jpg" alt=""></a>
+                     <h4><a href="youxi/zhuye/single.html">Sed ut perspiciatis unde omnis</a></h4>
+                    <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>
+                 </div>
+             </div>
+              <div class="col-md-4 sed-md">
+                  <div class=" col-1">
+                     <a href="youxi/zhuye/single.html"><img class="img-responsive" src="youxi/zhuye/images/re4.jpg" alt=""></a>
+                     <h4><a href="youxi/zhuye/single.html">Sed ut perspiciatis unde omnis</a></h4>
+                    <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>
+                 </div>
+             </div>
+              <div class="col-md-4 sed-md">
+                  <div class=" col-1">
+                     <a href="youxi/zhuye/single.html"><img class="img-responsive" src="youxi/zhuye/images/re5.jpg" alt=""></a>
+                     <h4><a href="youxi/zhuye/single.html">Sed ut perspiciatis unde omnis</a></h4>
+                    <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>
+                 </div>
+             </div>
+             <div class="clearfix"> </div>
+            &lt;!&ndash;</div>&ndash;&gt;
+           &lt;!&ndash; <div class="review-md1">&ndash;&gt;
+             <div class="col-md-4 sed-md">
+                  <div class=" col-1">
+                     <a href="youxi/zhuye/single.html"><img class="img-responsive" src="youxi/zhuye/images/re6.jpg" alt=""></a>
+                     <h4><a href="youxi/zhuye/single.html">Sed ut perspiciatis unde omnis</a></h4>
+                    <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>
+                 </div>
+             </div>
+              <div class="col-md-4 sed-md">
+                  <div class=" col-1">
+                     <a href="youxi/zhuye/single.html"><img class="img-responsive" src="youxi/zhuye/images/re7.jpg" alt=""></a>
+                     <h4><a href="youxi/zhuye/single.html">Sed ut perspiciatis unde omnis</a></h4>
+                    <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>
+                 </div>
+             </div>
+              <div class="col-md-4 sed-md">
+                  <div class=" col-1">
+                     <a href="youxi/zhuye/single.html"><img class="img-responsive" src="youxi/zhuye/images/re1.jpg" alt=""></a>
+                     <h4><a href="youxi/zhuye/single.html">Sed ut perspiciatis unde omnis</a></h4>
+                    <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>
+                 </div>
+             </div>
+				 <div class="clearfix"> </div>
+				&lt;!&ndash;</div>&ndash;&gt;-->
+		</div>
+	</div>
+	<!---->
+<!--引入抽取的重复元素底部foot-->
+<!--模板名：会使用thymeleaf的前后缀配置规则进行解析-->
+<div th:insert="~{youxi/zhuye/foot::footbar}" ></div>
+</body>
+</html>
